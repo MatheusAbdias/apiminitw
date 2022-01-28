@@ -33,4 +33,4 @@
 - `http://127.0.0.1:8000/api/login/` Ao fazer uma requisição (POST) com username e password em formato json, o usuário sera logado e recebera um token para poder acessar a area de post, (Adicionar no header Authorization e passar Token "Codigo disponibilizado").
 - `http://127.0.0.1:8000/api/logout/` Ao fazer uma requisição (GET) a endpoint apagara o token associado ao usuário.
 ## Deploy
-- O projeot esta feito deploy no heroku pode ser acessado pelo <a href="https://api-minitw.herokuapp.com/">Link<a>, todas as urls que foram mostradas estão em funcionamento.
+- O projeto esta feito deploy no heroku pode ser acessado pelo <a href="https://api-minitw.herokuapp.com/">Link<a>, todas as urls que foram mostradas estão em funcionamento.
