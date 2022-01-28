@@ -1,6 +1,4 @@
 from pathlib import Path
-import os
-import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -10,12 +8,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'b4dfd0d25cc4aa68878fc68fe40b65e02e41b048fe33987b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == True
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://api-minitw.herokuapp.com/']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -85,16 +83,16 @@ DATABASES = {
 
     }
 }
-
-AWS_ACCESS_KEY_ID = 'AKIAQYFIQ5OAD2UPMPPX'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'dj-rest-api'
-AWS_S3_SIGNATURE_VERSION = 's3v4'
-AWS_S3_REGION_NAME = 'us-east-1'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL = None
-AWS_S3_VERIFY = True
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+#Informações do aws S3
+#AWS_ACCESS_KEY_ID = ''
+#AWS_SECRET_ACCESS_KEY = ''
+#AWS_STORAGE_BUCKET_NAME = ''
+#AWS_S3_SIGNATURE_VERSION = ''
+#AWS_S3_REGION_NAME = ''
+#AWS_S3_FILE_OVERWRITE = False  
+#AWS_DEFAULT_ACL = None
+#AWS_S3_VERIFY = True
+#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -132,7 +130,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfile')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -141,7 +138,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'autenticacao.Usuario'
 
-django_heroku.settings(locals())
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
