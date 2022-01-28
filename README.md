@@ -25,7 +25,7 @@
 - Descricao: um campo que armazena uma string (obrigatório ao criar uma postagem.)
 - Imagem: armazena uma imagem (não obrigatorio.)
 ### Diagrama Relacional:<br>
- ![Api Doc](https://i.imgur.com/pyS9F1x.png)
+ ![Api Doc](https://i.imgur.com/bMwmDBl.jpg)
 ## Descrição das rotas criadas
 - `http://127.0.0.1:8000/admin/`: Área de administração do django.
 - `http://127.0.0.1:8000/api/usuarios/`: Ao fazer uma requisição (GET) a esta endpoint, ela retornará um json com todos os usuários cadastrados na plataforma. 
